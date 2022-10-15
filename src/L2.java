@@ -1,13 +1,12 @@
-import java.sql.Time;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-public class Main {
+public class L2 {
 
 
     public static void main(String[] args) {
 
-        a3();
+        a1();
     }
 
     public static void a1(){
@@ -22,7 +21,7 @@ public class Main {
         System.out.println("Fläche: "+a);
         System.out.println("Umfang: "+u);
 
-        double v = Math.pow(radius,3)*(4d/3d);
+        double v = (4d/3d)*Math.PI*Math.pow(radius,3);
         System.out.println("Kugel:");
         System.out.println("Volumen: "+v);
 
