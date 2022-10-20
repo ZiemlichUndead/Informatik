@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class L3 {
 
     public static void main(String[] args) {
-       a5();
+       a6();
 
     }
 
@@ -142,4 +142,21 @@ public class L3 {
         a5();
 
     }
+
+    public static void a6(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Jahr eingeben: ");
+        int jahr = sc.nextInt();
+
+        if(jahr % 4 == 0 && (jahr % 100 != 0 || jahr % 400 == 0)){
+            System.out.println("Du hast ein Schaltjahr eingeben!");
+        }else{
+            System.out.println("Du hast kein Schaltjahr eingegeben!");
+        }
+        a6();
+
+
+    }
+
+
 }
