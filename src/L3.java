@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class L3 {
 
     public static void main(String[] args) {
-       a6();
+       a3();
 
     }
 
@@ -12,9 +12,6 @@ public class L3 {
         Scanner sc = new Scanner(System.in);
         int input = sc.nextInt();
         System.out.println("Durch 7 Teilbar: "+(input%7==0));
-
-        double d = sc.nextDouble();
-        System.out.println((d%7.5f));
 
         /*b)
         Bei Negativen Zahlen funktioniert Modulo normal, gibt aber bei unterschiedlichen vorzeichen negativen rest aus
@@ -46,10 +43,11 @@ public class L3 {
         double pizza2PricePerArea = pizza2Preis / pizza2Area;
 
         if(pizza2PricePerArea > pizza1PricePerArea){
-            System.out.println("Pizza 1 Kostet "+pizza1PricePerArea+"€/cm² und ist damit preiswerter als Pizza 2 mit "+pizza2PricePerArea+"€/m²");
+            System.out.println("Pizza 1 Kostet "+pizza1PricePerArea+"€/cm² und ist damit preiswerter als Pizza 2 mit "+pizza2PricePerArea+"€/cm²");
         }else{
-            System.out.println("Pizza 2 Kostet "+pizza2PricePerArea+"€/cm² und ist damit preiswerter als Pizza 1 mit "+pizza1PricePerArea+"€/m²");
+            System.out.println("Pizza 2 Kostet "+pizza2PricePerArea+"€/cm² und ist damit preiswerter als Pizza 1 mit "+pizza1PricePerArea+"€/cm²");
         }
+        sc.close();
     }
 
     public static void a3(){
@@ -80,6 +78,7 @@ public class L3 {
 
 
         a3();
+        sc.close();
 
     }
 
@@ -114,7 +113,8 @@ public class L3 {
 
     public static void a5(){
         System.out.println("Matrikelnummer eingeben:");
-        String input = new Scanner(System.in).nextLine();
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
 
         boolean isIntNumber = false;
         try{
@@ -140,6 +140,7 @@ public class L3 {
         }
 
         a5();
+        sc.close();
 
     }
 
@@ -154,6 +155,7 @@ public class L3 {
             System.out.println("Du hast kein Schaltjahr eingegeben!");
         }
         a6();
+        sc.close();
 
 
     }
