@@ -3,9 +3,30 @@ import java.util.Scanner;
 public class L7 {
 
     public static void main(String[] args) {
-        a2();
+        a1();
     }
 
+    public static void a1(){
+        double d = 12;
+        System.out.println("Math sin: "+Math.sin(d));
+        System.out.println("sin: "+sin(d));
+        System.out.println("ssin: "+ssin(d));
+    }
+    public static double ssin(double x)
+    {
+        double zaehler = x;
+        double nenner = 1;
+        double summe = x;
+        double summand = 1;
+        for (int i = 3; summand > 1E-15 || summand < -1E-15; i = i + 2)
+        {
+            zaehler = zaehler * x * x * (-1);
+            nenner = nenner * i * (i - 1);
+            summand = zaehler / nenner;
+            summe = summe + summand;
+        }
+        return summe;
+    }
     public static double sin(double x){
         double summand = 1;
         double summe = 0;
