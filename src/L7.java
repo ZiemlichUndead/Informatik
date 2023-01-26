@@ -1,24 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class L7 {
 
     public static void main(String[] args) {
-        a1();
+        test();
     }
 
     public static void a1(){
-        double d = 12;
+        double d = 3;
         System.out.println("Math sin: "+Math.sin(d));
         System.out.println("sin: "+sin(d));
         System.out.println("ssin: "+ssin(d));
+        System.out.println("cos: "+cos(d));
     }
-    public static double ssin(double x)
+    public static double cos(double x)
     {
-        double zaehler = x;
-        double nenner = 1;
-        double summe = x;
+        double zaehler = 1.0;
+        double nenner = 1.0;
+        double summe = 1.0;
         double summand = 1;
-        for (int i = 3; summand > 1E-15 || summand < -1E-15; i = i + 2)
+        for (int i = 2; summand > 1E-15 || summand < -1E-15; i = i + 2)
         {
             zaehler = zaehler * x * x * (-1);
             nenner = nenner * i * (i - 1);
@@ -27,6 +30,30 @@ public class L7 {
         }
         return summe;
     }
+
+    public static double ssin(double x)
+    {
+        double zaehler = x;
+        double nenner = 1;
+        double summe = x;
+        double summand = 1;
+
+        for (int i = 3; summand > 1E-15 || summand < -1E-15; i = i + 2)
+        {
+            zaehler = zaehler * x * x * (-1);
+            nenner = nenner * i * (i - 1);
+            summand = zaehler / nenner;
+            summe = summe + summand;
+        }
+
+        return summe;
+    }
+
+    /**
+     *
+     * @param x ist die Zahl in RAD
+     * @return Gibt den Sinuswert von x zurück
+     */
     public static double sin(double x){
         double summand = 1;
         double summe = 0;
@@ -120,5 +147,33 @@ public class L7 {
             }
         }
         return res;
+    }
+
+
+    public static void test(){
+        List<String> rtWerte = new ArrayList<>();
+        rtWerte.add("5");
+        rtWerte.add("none");
+        rtWerte.add("4");
+        rtWerte.add("8");
+        rtWerte.add("2");
+        rtWerte.add("none");
+        rtWerte.add("7");
+        rtWerte.add("7");
+        rtWerte.add("6");
+        rtWerte.add("2");
+        rtWerte.add("3");
+
+
+        System.out.println(rtWerte);
+
+        for (int i = 0; i < rtWerte.size(); i++) {
+            String currentValue = rtWerte.get(i);
+            if(currentValue.equals("none")){
+                rtWerte.set(i+1,"deleted");
+            }
+        }
+        System.out.println(rtWerte);
+
     }
 }

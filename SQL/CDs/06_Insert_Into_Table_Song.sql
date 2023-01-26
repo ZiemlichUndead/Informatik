@@ -1,0 +1,22 @@
+INSERT INTO Song VALUES
+	(1,'Where Streets'),
+	(2,'I Still havent'),
+	(3,'With or'),
+	(4,'Bullet'),
+	(5,'Red Hill'),
+	(6,'Radio Song'),
+	(7,'Losing My'),
+	(8,'Low'),
+	(9,'Near Wild'),
+	(10,'Endgame'),
+	(11,'Beautiful'),
+	(12,'Heaven'),
+	(13,'I Was Born'),
+	(14,'Too Much'),
+	(15,'My Life'),
+	(16,'Crossroads'),
+	(17,'Bridges'),
+	(18,'Freedom'),
+	(19,'Thriller'),
+	(20,'Black Or')
+	;

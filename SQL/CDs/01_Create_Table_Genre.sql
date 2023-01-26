@@ -1,0 +1,3 @@
+CREATE TABLE Genre (
+	genre VARCHAR (20) NOT NULL PRIMARY KEY
+);
