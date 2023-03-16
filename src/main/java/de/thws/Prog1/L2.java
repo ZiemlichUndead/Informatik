@@ -1,3 +1,5 @@
+package main.java.de.thws.Prog1;
+
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
