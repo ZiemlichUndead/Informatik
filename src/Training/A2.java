@@ -7,6 +7,8 @@ public class A2 {
     public static class SpaceInvaders{
 
         String[] spielfeld = new String[5];
+
+
         int shipPos = 0;
 
 
@@ -55,18 +57,45 @@ public class A2 {
         }
 
         public static void main(String[] args){
+
+//            test();
+//            return;
+
             SpaceInvaders game = new SpaceInvaders();
             game.init();
-            System.out.println(game);
+            System.out.println(game.toString());
 
             Scanner sc = new Scanner(System.in);
 
             while(true){
-                char input = sc.next().charAt(0);
-                if(input == 'x') return;
+                char input = sc.nextLine().toCharArray()[0];
+
+                if(input == 'x') {
+                    return;
+                }
+
                 game.bewege(input);
                 System.out.println(game);
             }
+
+        }
+
+        public static void test(){
+            char[][] spiel = {
+                    "oooooooo".toCharArray(),
+                    "        ".toCharArray(),
+                    "        ".toCharArray(),
+                    "        ".toCharArray(),
+                    "        ".toCharArray()};
+
+            int pos = (int) (Math.random()*7);
+            spiel[4][pos] = 'v';
+
+
+            for (int i = 0; i < spiel.length; i++) {
+                System.out.println(new String(spiel[i]));
+            }
+
 
         }
     }

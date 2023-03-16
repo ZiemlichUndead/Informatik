@@ -28,9 +28,18 @@ public class A1 {
 
     }
     public static void main(String[] args){
-        char[] filename = "Graphik.Init.Datei.ini".toCharArray();
+        char[] filename = "Graphik.Init.Datei.jpg".toCharArray();
         System.out.println("Changed chars: "+replace(filename));
         System.out.println(new String(filename));
+
+
+
+
+//        String lol =  "hallo das ist mein name";
+//        lol = lol.replace('l','X');
+//
+//        System.out.println(lol);
+
     }
 
 
