@@ -1,4 +1,4 @@
-package de.thws.Prog2.L1;
+package de.thws.Prog2.L14;
 
 public class Strecke {
     public int start;

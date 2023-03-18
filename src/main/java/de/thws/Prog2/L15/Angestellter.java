@@ -1,6 +1,5 @@
-package de.thws.Prog2.L2;
+package de.thws.Prog2.L15;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Angestellter {
@@ -20,5 +19,8 @@ public class Angestellter {
         this.geburtstag = geburtstag;
     }
 
+    public double getGehalt(){
+        return gehalt*gehaltsfaktor;
+    }
 
 }

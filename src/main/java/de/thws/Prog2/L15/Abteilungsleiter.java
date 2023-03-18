@@ -1,4 +1,4 @@
-package de.thws.Prog2.L2;
+package de.thws.Prog2.L15;
 
 import java.util.Date;
 
@@ -9,6 +9,7 @@ public class Abteilungsleiter extends Angestellter{
     }
 
     public void befoerdern(Angestellter a){
-        a.gehalt *= 1.1f;
+        a.gehaltsfaktor *= 1.1;
     }
+
 }

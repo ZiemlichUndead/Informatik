@@ -1,4 +1,4 @@
-package de.thws.Prog2.L2;
+package de.thws.Prog2.L15;
 
 import java.util.Date;
 
