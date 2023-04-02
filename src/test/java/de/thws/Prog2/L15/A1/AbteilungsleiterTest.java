@@ -1,6 +1,9 @@
-package de.thws.Prog2.L15;
+package de.thws.Prog2.L15.A1;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import de.thws.Prog2.L15.A1.Abteilungsleiter;
+import de.thws.Prog2.L15.A1.Angestellter;
 import org.junit.jupiter.api.Test;
 import java.util.Date;
 

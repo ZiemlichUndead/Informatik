@@ -1,4 +1,4 @@
-package de.thws.Prog2.L15;
+package de.thws.Prog2.L15.A1;
 
 import java.util.Date;
 
@@ -10,7 +10,7 @@ public class Angestellter {
     public double gehaltsfaktor;
     public Date geburtstag;
 
-    public Angestellter(String namen, String vornamen, int id, int gehalt,Date geburtstag) {
+    public Angestellter(String namen, String vornamen, int id, int gehalt, Date geburtstag) {
         this.namen = namen;
         this.vornamen = vornamen;
         this.id = id;
