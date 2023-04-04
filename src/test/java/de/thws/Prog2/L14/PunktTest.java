@@ -27,8 +27,9 @@ public class PunktTest {
 
     void testMoveFailing(int x, int y){
         try {
-            testMove(x, y);
-            throw new RuntimeException("Exception expected");
+            Punkt p = new Punkt();
+            p.verschiebePunkt(x,y);
+            fail("Exception expected");
         }catch (RuntimeException e){
             assertEquals("Point out of bounds",e.getMessage());
         }

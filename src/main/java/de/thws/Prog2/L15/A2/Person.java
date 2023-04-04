@@ -1,9 +1,6 @@
 package de.thws.Prog2.L15.A2;
 
 public abstract class Person {
-
-
-
     String fach;
 
     public Person(String fach) {

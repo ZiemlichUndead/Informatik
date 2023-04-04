@@ -37,7 +37,7 @@ public class PersonTest {
     void testPersonFailing(String vorname,String nachname,String strasse, String hausnummer, String postleitzahl, String ort){
         try{
             testPerson(vorname,nachname,strasse,hausnummer,postleitzahl,ort);
-            throw new RuntimeException("Exception Expected");
+            fail("Exception Expected");
         }catch (RuntimeException e){
             assertEquals("One of the fields has an unlegitimate value",e.getMessage());
         }

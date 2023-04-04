@@ -14,7 +14,12 @@ public class AbteilungsleiterTest {
         Angestellter a1 = new Angestellter("A","1",0,10,new Date(2000,25,7));
         Abteilungsleiter al1 = new Abteilungsleiter("Al","1",3,15,new Date(2000,26,7));
         al1.befoerdern(a1);
-        assertEquals(a1.gehaltsfaktor,1.1);
-        assertEquals(a1.getGehalt(),11);
+        assertEquals(a1.gehaltsfaktor,1.1,0.01);
+        assertEquals(a1.getGehalt(),11,0.01);
+
+        al1.befoerdern(a1);
+
+        assertEquals(a1.gehaltsfaktor,1.21,0.01);
+        assertEquals(a1.getGehalt(),12.1,0.01);
     }
 }

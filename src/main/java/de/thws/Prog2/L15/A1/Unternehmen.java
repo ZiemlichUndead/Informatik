@@ -1,5 +1,6 @@
 package de.thws.Prog2.L15.A1;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Unternehmen {
@@ -20,6 +21,7 @@ public class Unternehmen {
 
         Unternehmen u = new Unternehmen(new Abteilung[]{ab1});
         al1.befoerdern(a1);
+
 
     }
 }

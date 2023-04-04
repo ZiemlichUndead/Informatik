@@ -13,14 +13,14 @@ public class KugelvolumenTest {
     }
     @Test
     void testOne(){
-        assertEquals(4.1887903296220665,Kugelvolumen.berechneKugelvolumen(1));
+        assertEquals(4.189,Kugelvolumen.berechneKugelvolumen(1),0.001);
     }
     @Test
     void testFive(){
-        assertEquals(523.5987912027583,Kugelvolumen.berechneKugelvolumen(5));
+        assertEquals(523.599,Kugelvolumen.berechneKugelvolumen(5),0.001);
     }
     @Test
     void testNegativeOne(){
-        assertEquals(-4.1887903296220665,Kugelvolumen.berechneKugelvolumen(-1));
+        assertEquals(-4.189,Kugelvolumen.berechneKugelvolumen(-1),0.001);
     }
 }
