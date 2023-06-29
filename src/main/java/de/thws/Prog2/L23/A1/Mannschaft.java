@@ -24,7 +24,7 @@ public class Mannschaft implements Comparable<Mannschaft>
             System.out.println(mannschaft.name);
         });
 
-        System.out.println(list.stream().max(Comparator.comparing(mannschaft -> mannschaft.gegentore)));
+        list.stream().max(Comparator.comparing(mannschaft -> mannschaft.gegentore)).ifPresent(System.out::println);
 
 
 //        list.stream().filter(mannschaft -> mannschaft.name.startsWith("F")).collect(new ArrayList<>() (l, mannschaft) -> l.add(mannschaft),(list1, list2) -> list1.addAll(list2));
