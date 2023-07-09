@@ -6,6 +6,8 @@ import de.thws.Prog2.L15.A1.Abteilungsleiter;
 import de.thws.Prog2.L15.A1.Angestellter;
 import org.junit.jupiter.api.Test;
 import java.util.Date;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class AbteilungsleiterTest {
     @Test
@@ -21,5 +23,8 @@ public class AbteilungsleiterTest {
 
         assertEquals(a1.gehaltsfaktor,1.21,0.01);
         assertEquals(a1.getGehalt(),12.1,0.01);
+
+        assertThrows(java.lang.NullPointerException.class, a1::getGehalt);
     }
+
 }
