@@ -1,7 +1,7 @@
 package de.thws.Prog2.training;
 
 public class A3 {
-
+//do something irrelevant
     public interface Visitor<T>
     {
         public void visit(Baum.Knoten<T> current);
