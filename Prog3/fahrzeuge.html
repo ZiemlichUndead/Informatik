@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width"/>
+  <title>ST-SC Homepage</title>
+  <link href="ST-SC-Homepage.css" rel="stylesheet"><link>
+  <script src="js/fahrzeuge.js"></script>
+</head>
+
+<body>
+
+<div class="header">
+  <h1><a class="cleanLink" href="index.html">ST-SC Homepage</a></h1>
+</div>
+
+
+<form id="form">
+
+  <label for="typ">Model:</label><br>
+  <select name="typ" id="typ">
+    <option value="PKW">PKW</option>
+    <option value="LKW">LKW</option>
+    <option value="Motorrad">Motorrad</option>
+    <option value="Trike">Trike</option>
+    <option value="Quad">Quad</option>
+  </select>
+  <br>
+
+  <label for="vendor">Vendor:</label><br>
+  <input type="text" id="vendor" name="vendor"><br>
+
+  <label for="model">Model:</label><br>
+  <input type="text" id="model" name="model"><br>
+
+  <label for="cubic">Cubic (in cm3):</label><br>
+  <input type="number" id="cubic" name="cubic"><br>
+
+  <label for="power">Power (in kWh):</label><br>
+  <input type="number" id="power" name="power"><br>
+
+  <label for="color">Color :</label><br>
+  <input type="color" id="color" name="color"><br>
+
+  <label for="damaged">Damaged :</label><br>
+  <select name="damaged" id="damaged">
+    <option value="crashFree">Crash-Free</option>
+    <option value="repaired">Repaired</option>
+    <option value="damaged">Damaged</option>
+  </select><br>
+
+  <br>
+  <input type="submit" value="Submit">
+
+</form>
+
+
+
+<button id="print">Print Cars</button>
+
+</body>
+
+</html>
