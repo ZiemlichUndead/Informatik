@@ -1,6 +1,6 @@
 'use strict';
 
-function Car (typ, vendor, model, cubic, power, color, damaged) {
+function Vehicle (typ, vendor, model, cubic, power, color, damaged) {
     this.typ = typ;
     this.vendor = vendor;
     this.model = model;
@@ -10,6 +10,15 @@ function Car (typ, vendor, model, cubic, power, color, damaged) {
     this.damaged = damaged;
 }
 
+
+function LKW (typ, vendor, model, cubic, power, color, damaged, lagerraum) {
+    Vehicle.call(this,typ, vendor, model, cubic, power, color, damaged);
+    this.lagerraum = lagerraum;
+
+}
+// Object.setPrototypeOf(LKW.prototype, Vehicle.prototype);
+
+
 var cars = [];
 window.addEventListener("load",function (e){
 
@@ -17,14 +26,7 @@ window.addEventListener("load",function (e){
         e.preventDefault();
 
         var formData = new FormData(document.getElementById("form"));
-        // output as an object
-        // console.log(Object.fromEntries(formData));
-
-        // // ...or iterate through the name-value pairs
-        // for (var pair of formData.entries()) {
-        //     console.log(pair[0] + ": " + pair[1]);
-        // }
-        cars.push(new Car(formData.get("typ"),
+        cars.push(new Vehicle(formData.get("typ"),
             formData.get("vendor"),
             formData.get("model"),
             formData.get("cubic"),
@@ -56,18 +58,4 @@ window.addEventListener("load",function (e){
 
 
 });
-
-// const vendor = {
-//     PKW: 'PKW',
-//     LKW: 'LKW',
-//     Motorrad: 'Motorrad',
-//     Trike: 'Trike',
-//     Quad: 'Quad'
-// };
-//
-// const Damaged = {
-//     CrashFree: 'Crash free',
-//     Repaired: 'Repaired',
-//     Damaged: 'Damaged'
-// };
 
