@@ -23,10 +23,10 @@ public class Albert {
         codeMap.put(3,"5");
 
         int zuper;
-        do{
+       /* do{
 
         } while ( ((zuper = (!(codeMap.isEmpty()) == !true != !codeMap.containsKey(2) == Boolean.valueOf("False") ? 0 : 1)) == 0);
-
+*/
     }
 
 }
