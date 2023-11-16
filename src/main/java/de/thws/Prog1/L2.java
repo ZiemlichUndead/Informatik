@@ -8,7 +8,7 @@ public class L2 {
 
     public static void main(String[] args) {
 
-        a1();
+        a3();
     }
 
     public static void a1(){
