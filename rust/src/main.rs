@@ -1,10 +1,66 @@
+mod second;
+
 use std::alloc::System;
 use std::time::{SystemTime, UNIX_EPOCH};
 
 fn main() {
-    pizzarechner();
-    zeit();
+    test();
 }
+
+
+
+struct Student<T> {
+    id: T,
+    firstname: String,
+    lastname: String,
+}
+
+fn test(){
+    let s = Student{id:String::from("f1338"),firstname:String::from("Test"),lastname:String::from("123")};
+    let t = Student{id:1334,firstname:String::from("Test"),lastname:String::from("123")};
+    s.pretty_print();
+    s.pretty_print_censored('f');
+    t.pretty_print_censored('3');
+}
+
+
+impl<T: std::fmt::Display> Student<T> {
+    fn pretty_print(&self){
+        let firstname = &self.firstname;
+        let lastname = &self.lastname;
+        let id = &self.id;
+        println!("{firstname} {lastname} ({id})")
+    }
+
+}
+
+impl Student<i32> {
+
+    fn pretty_print_censored(&self, censor: char) {
+        let firstname = &self.firstname;
+        let lastname = &self.lastname;
+        let id = &self.id;
+
+        let s: String = id.to_string();
+        if(!s.contains(censor)){
+            println!("{firstname} {lastname} ({id})")
+        }
+    }
+}
+impl Student<String> {
+    fn pretty_print_censored(&self, censor: char) {
+        let firstname = &self.firstname;
+        let lastname = &self.lastname;
+        let id = &self.id;
+
+        //let id2 = &id.replace(censor,"");
+        if(!&id.contains(censor)){
+            println!("{firstname} {lastname} ({id})")
+        }
+
+    }
+}
+
 
 fn pizzarechner(){
     let pizza_1_durchmesser:f64 = 10.0;
