@@ -1,10 +1,13 @@
 mod second;
+mod third;
 
 use std::alloc::System;
 use std::time::{SystemTime, UNIX_EPOCH};
 
 fn main() {
-    test();
+    // third::third();
+    third::test_weekday();
+    // third::hello();
 }
 
 
