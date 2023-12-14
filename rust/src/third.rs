@@ -10,32 +10,53 @@ struct Car2 {
     color: String,
 }
 
+#[cfg(test)]
+mod tests{
+    use crate::third::get_weekday;
+
+    #[test]
+    fn test() {
+        assert_eq!(get_weekday(0),String::from("Montag"));
+        assert_eq!(get_weekday(1),String::from("Dienstag"));
+        assert_eq!(get_weekday(2),String::from("Mittwoch"));
+        assert_eq!(get_weekday(3),String::from("Donnerstag"));
+        assert_eq!(get_weekday(4),String::from("Freitag"));
+        assert_eq!(get_weekday(5),String::from("Samstag"));
+        assert_eq!(get_weekday(6),String::from("Sonntag"));
+    }
+    #[test]
+    #[should_panic]
+    fn test_err(){
+        get_weekday(7);
+    }
+}
+
 pub(crate) fn third(){
-    let car1 = crate::third::Car2 {
+    let car1 = Car2 {
         brand: String::from("Toyota"),
         model: String::from("Camry"),
         year: Some(2020),
         color: String::from("Blue"),
     };
-    let car2 = crate::third::Car2 {
+    let car2 = Car2 {
         brand: String::from("Ford"),
         model: String::from("Mustang"),
         year: Some(2015),
         color: String::from("Red"),
     };
-    let car3 = crate::third::Car2 {
+    let car3 = Car2 {
         brand: String::from("Ford"),
         model: String::from("Fokus"),
         year: None,
         color: String::from("Lila"),
     };
-    let car4 = crate::third::Car2 {
+    let car4 = Car2 {
         brand: String::from("Opel"),
         model: String::from("Astra"),
         year: None,
         color: String::from("Red"),
     };
-    let car5 = crate::third::Car2 {
+    let car5 = Car2 {
         brand: String::from("Audi"),
         model: String::from("R9"),
         year: Some(2050),
@@ -60,6 +81,7 @@ fn print_autos(arr: &[Car2]){
 pub(crate) fn test_weekday(){
     print!("{:?}",get_weekday(0));
     print!("{:?}",get_weekday(7));
+
 }
 
 fn get_weekday(i: i32) -> String{
